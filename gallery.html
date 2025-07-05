@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Гостевой дом</title>
+    <meta name="description" content="Фотографии нашего гостевого дома и окрестностей. Посмотрите на интерьеры, природу и удобства.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-home"></i>
+                <span>Гостевой дом</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="gallery.html" class="nav-link active">Галерея</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="booking.html" class="nav-link booking-btn">Бронирование</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background">
+            <img src="https://pixabay.com/get/g56881e748c6702dc884ecd871571405a5233f1eac7be484e10361ca61c56071c24fda6a5eb2f668d5d961c5a0c7d5ac8dca9b53bf067ecd10ad914491f44d167_1280.jpg" alt="Галерея">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Галерея</h1>
+                <p class="page-subtitle">Фотографии нашего гостевого дома и окрестностей</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Controls -->
+    <section class="gallery-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-th"></i>
+                        Все фото
+                    </button>
+                    <button class="filter-btn" data-category="exterior">
+                        <i class="fas fa-home"></i>
+                        Экстерьер
+                    </button>
+                    <button class="filter-btn" data-category="interior">
+                        <i class="fas fa-couch"></i>
+                        Интерьер
+                    </button>
+                    <button class="filter-btn" data-category="nature">
+                        <i class="fas fa-tree"></i>
+                        Природа
+                    </button>
+                    <button class="filter-btn" data-category="amenities">
+                        <i class="fas fa-swimming-pool"></i>
+                        Удобства
+                    </button>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                        Сетка
+                    </button>
+                    <button class="view-btn" data-view="slider">
+                        <i class="fas fa-images"></i>
+                        Слайдер
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Exterior Photos -->
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gfa77d3708407071e51492bdf7f921d2b746731b38873f2679413a8bb8a5bf6c42522f6367954c825de0cd6a2958021c6d692a5274e8fbaf8de54fd670fec916c_1280.jpg" alt="Фасад гостевого дома">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Фасад гостевого дома</h3>
+                                <p>Современный дизайн в гармонии с природой</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gfa77d3708407071e51492bdf7f921d2b746731b38873f2679413a8bb8a5bf6c42522f6367954c825de0cd6a2958021c6d692a5274e8fbaf8de54fd670fec916c_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gf02857f17fdc531d0eb6668059b9d679b2beb2ebf7bfd5a9a542814f2fe72124f7cae20e4cdde8f2b8cdb62ea032254316a895603675faa62a3b1d3f098d0979_1280.jpg" alt="Дом с террасой">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Дом с террасой</h3>
+                                <p>Просторная терраса для отдыха</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gf02857f17fdc531d0eb6668059b9d679b2beb2ebf7bfd5a9a542814f2fe72124f7cae20e4cdde8f2b8cdb62ea032254316a895603675faa62a3b1d3f098d0979_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g030359168bc566a9858214f847b6b62d69731d1d87cd62d0d743aa201cbcdb98c1e2c6549ec60182eeb50b16b0bda67e0b1a752886066aa05679000f4b8698cc_1280.jpg" alt="Панорамный вид">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Панорамный вид</h3>
+                                <p>Дом в окружении природы</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g030359168bc566a9858214f847b6b62d69731d1d87cd62d0d743aa201cbcdb98c1e2c6549ec60182eeb50b16b0bda67e0b1a752886066aa05679000f4b8698cc_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g16c6c2d6a28160424fef29af30f9667b0ebc02b02dfed6313df42715322b4e03ee2f37f649e31686876211f3a6dc0a31cd268681823f50a22813ad204aea67a4_1280.jpg" alt="Архитектурные детали">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Архитектурные детали</h3>
+                                <p>Элегантные линии и формы</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g16c6c2d6a28160424fef29af30f9667b0ebc02b02dfed6313df42715322b4e03ee2f37f649e31686876211f3a6dc0a31cd268681823f50a22813ad204aea67a4_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/ga3b4d6a8fa58f5f308036e4ac20c3ae030541f81dd50ce4a44333f628febbb9a6020d998c074fe8ee27b4d5c7eaeaba919727e813bc4f34193ded475eb514fca_1280.jpg" alt="Вход в дом">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Вход в дом</h3>
+                                <p>Приветливый и стильный вход</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/ga3b4d6a8fa58f5f308036e4ac20c3ae030541f81dd50ce4a44333f628febbb9a6020d998c074fe8ee27b4d5c7eaeaba919727e813bc4f34193ded475eb514fca_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g56881e748c6702dc884ecd871571405a5233f1eac7be484e10361ca61c56071c24fda6a5eb2f668d5d961c5a0c7d5ac8dca9b53bf067ecd10ad914491f44d167_1280.jpg" alt="Современная архитектура">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Современная архитектура</h3>
+                                <p>Минимализм и функциональность</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g56881e748c6702dc884ecd871571405a5233f1eac7be484e10361ca61c56071c24fda6a5eb2f668d5d961c5a0c7d5ac8dca9b53bf067ecd10ad914491f44d167_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interior Photos -->
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g872cb229996eeb6729771bb516b0b6989ce038517dec330efb073b200929efc2b1488775768f04023d1c8e5bb37da6caae4fd0cbb1e1ead72ff69551fadcdee3_1280.jpg" alt="Гостиная">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Уютная гостиная</h3>
+                                <p>Комфортная зона для отдыха</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g872cb229996eeb6729771bb516b0b6989ce038517dec330efb073b200929efc2b1488775768f04023d1c8e5bb37da6caae4fd0cbb1e1ead72ff69551fadcdee3_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gdcb3f5dd5833128acc2f76f0b89a55186bdea16479d7819850636c0d121d5e4f934376da66012e29bd3fd3b23798eb81380af7fcbec3a467125f6bda6170e82b_1280.jpg" alt="Спальня">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Комфортная спальня</h3>
+                                <p>Место для крепкого сна</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gdcb3f5dd5833128acc2f76f0b89a55186bdea16479d7819850636c0d121d5e4f934376da66012e29bd3fd3b23798eb81380af7fcbec3a467125f6bda6170e82b_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gf1e191df4ba5731c9fff75bf78d3e1855707a345e6e4fcac403369840083cf475d018b25ef9e35afa16d5f9bf7c5e5046a730ab91ac9fe12f0b085f6168de8cd_1280.jpg" alt="Современная кухня">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Современная кухня</h3>
+                                <p>Полностью оборудованная кухня</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gf1e191df4ba5731c9fff75bf78d3e1855707a345e6e4fcac403369840083cf475d018b25ef9e35afa16d5f9bf7c5e5046a730ab91ac9fe12f0b085f6168de8cd_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/ga156fe7541ab72bf599c055ded506621e50ab14eac663d78e73d21859b657102dd31f9e0ae8bd5e046c4d528972720f87024a5ef0b7f2d38f3ad850da6a5c520_1280.jpg" alt="Столовая">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Столовая зона</h3>
+                                <p>Место для семейных обедов</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/ga156fe7541ab72bf599c055ded506621e50ab14eac663d78e73d21859b657102dd31f9e0ae8bd5e046c4d528972720f87024a5ef0b7f2d38f3ad850da6a5c520_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g5199227af85b3f355b0436372771aa63df665dae0540e3f4b6a6edef9032c9e0c66761b2a8bb96926c4843875001c2dc3db6c1069132760d45a6f7f0f35d9944_1280.jpg" alt="Ванная комната">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Ванная комната</h3>
+                                <p>Стильная и функциональная</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g5199227af85b3f355b0436372771aa63df665dae0540e3f4b6a6edef9032c9e0c66761b2a8bb96926c4843875001c2dc3db6c1069132760d45a6f7f0f35d9944_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gf6cee501dd5e16bd9f1634965c0fd3cb1126ab9898860c69f3e41d269b750feae8548200bbad42c156e92ecbf69f335d939d9ad4a4aba913bd1f0e2d4371ad7d_1280.jpg" alt="Рабочее место">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Рабочее место</h3>
+                                <p>Уютный уголок для работы</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gf6cee501dd5e16bd9f1634965c0fd3cb1126ab9898860c69f3e41d269b750feae8548200bbad42c156e92ecbf69f335d939d9ad4a4aba913bd1f0e2d4371ad7d_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nature Photos -->
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gd896c056c709f18b5d0023e6a15a92a0883cd831cab32d9337b4e516f320a5f4491f64f6697c37ca144e87032b7dd3aed555a929db2a5e1d019d6d61c24382c5_1280.jpg" alt="Лесной пейзаж">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Лесной пейзаж</h3>
+                                <p>Красота окружающей природы</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gd896c056c709f18b5d0023e6a15a92a0883cd831cab32d9337b4e516f320a5f4491f64f6697c37ca144e87032b7dd3aed555a929db2a5e1d019d6d61c24382c5_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/gc11230b7f5f316c543f2bc71f8f7b372b284bc028a6e7aef00094b0f11aa21580e7753636cf13dda170ab9a64cf3f8f9b45430ff4ad0380e9fad28b9112419ed_1280.jpg" alt="Река в лесу">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Река в лесу</h3>
+                                <p>Спокойные воды рядом с домом</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/gc11230b7f5f316c543f2bc71f8f7b372b284bc028a6e7aef00094b0f11aa21580e7753636cf13dda170ab9a64cf3f8f9b45430ff4ad0380e9fad28b9112419ed_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g239bfcc4d26474158fa6919f119cd5a95bee1ef0dd23faf827b10e894aef3179e20e882e0f0b59a9a2e4936acbd2ab7a520edae480c35e23f818a6cf5484026d_1280.jpg" alt="Горный ручей">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Горный ручей</h3>
+                                <p>Кристально чистая вода</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g239bfcc4d26474158fa6919f119cd5a95bee1ef0dd23faf827b10e894aef3179e20e882e0f0b59a9a2e4936acbd2ab7a520edae480c35e23f818a6cf5484026d_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/ga3deb8bafcfe535cf5fad2198c71eef06bbce4bde8974f2296eca2b17f9bcc7aad8d6ec04d3ab01a9b555b33080b23d4c8752476c3f7737829b32912c5ced627_1280.jpg" alt="Осенний лес">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Осенний лес</h3>
+                                <p>Золотые краски природы</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/ga3deb8bafcfe535cf5fad2198c71eef06bbce4bde8974f2296eca2b17f9bcc7aad8d6ec04d3ab01a9b555b33080b23d4c8752476c3f7737829b32912c5ced627_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amenities Photos -->
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g4c72d9616fadace9ed222c2cf19017bdc43aa30efc45372e8bc196c01fe8af30bc76049d87ed02dc19d06dd16c137f132f14192e81ae4cc974613e124a155681_1280.jpg" alt="Сауна">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Финская сауна</h3>
+                                <p>Релаксация и оздоровление</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g4c72d9616fadace9ed222c2cf19017bdc43aa30efc45372e8bc196c01fe8af30bc76049d87ed02dc19d06dd16c137f132f14192e81ae4cc974613e124a155681_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g5de43ecabba067c4e9feffa719bd171583f4a8ccde4aa352d5058ededdab5d99988975854b5b99acb4aee2b5775112ad8e5f16221c20eadadfc87ced50dae766_1280.jpg" alt="Интерьер сауны">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Интерьер сауны</h3>
+                                <p>Традиционная отделка деревом</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g5de43ecabba067c4e9feffa719bd171583f4a8ccde4aa352d5058ededdab5d99988975854b5b99acb4aee2b5775112ad8e5f16221c20eadadfc87ced50dae766_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g9744c962ba512a191d55f0b05ddc5af9695f1b191e4af4fa36354249f72a307c38a23b5398f5895970f611cb97545b0ec24da10f53be4112860e9f409fce40de_1280.jpg" alt="Спа зона">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Спа зона</h3>
+                                <p>Место для полного расслабления</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g9744c962ba512a191d55f0b05ddc5af9695f1b191e4af4fa36354249f72a307c38a23b5398f5895970f611cb97545b0ec24da10f53be4112860e9f409fce40de_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g7b9a900c43569a826686932124f1283de17f2eda0d7fde60ba3b2219f5ee1a93f777aea47a6ebd12d6b2dc3e9a113d3eeb476aa818cd0be5451a9891789cb797_1280.jpg" alt="Комната отдыха">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Комната отдыха</h3>
+                                <p>Уютное место после сауны</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g7b9a900c43569a826686932124f1283de17f2eda0d7fde60ba3b2219f5ee1a93f777aea47a6ebd12d6b2dc3e9a113d3eeb476aa818cd0be5451a9891789cb797_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g42bc053fc2ec73eb096c38543ecdda1580b156470fcbbcda3debaf4ec856251538eead5785de6c5eeb0ac1b8a503a106b7bf896eaaddcc2919b274c3b8488e47_1280.jpg" alt="Зона барбекю">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Зона барбекю</h3>
+                                <p>Приготовление на открытом воздухе</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g42bc053fc2ec73eb096c38543ecdda1580b156470fcbbcda3debaf4ec856251538eead5785de6c5eeb0ac1b8a503a106b7bf896eaaddcc2919b274c3b8488e47_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g8d0b4ca0da869c4ef0f91685ce655b8cac201a718590746ef45149d7252191c656d84b0e2444ec61ec70ae7aab2ca16716976e37e27157430b583ccafe78aa25_1280.jpg" alt="Мангальная зона">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Мангальная зона</h3>
+                                <p>Оборудованное место для готовки</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g8d0b4ca0da869c4ef0f91685ce655b8cac201a718590746ef45149d7252191c656d84b0e2444ec61ec70ae7aab2ca16716976e37e27157430b583ccafe78aa25_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="amenities">
+                    <div class="gallery-image">
+                        <img src="https://pixabay.com/get/g8f3eb945a81f960c3fef048147656551caf40c2f0935b20f85753f545f745884302d8608e317310d60d6c01236f005709eb418734ad8879f23b2d6f1a4dd1829_1280.jpg" alt="Терраса для отдыха">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Терраса для отдыха</h3>
+                                <p>Комфортная мебель на свежем воздухе</p>
+                                <button class="view-btn-overlay" data-src="https://pixabay.com/get/g8f3eb945a81f960c3fef048147656551caf40c2f0935b20f85753f545f745884302d8608e317310d60d6c01236f005709eb418734ad8879f23b2d6f1a4dd1829_1280.jpg">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Slider -->
+    <section class="gallery-slider hidden" id="gallery-slider">
+        <div class="slider-container">
+            <div class="slider-track" id="slider-track">
+                <!-- Slider images will be dynamically populated -->
+            </div>
+            
+            <button class="slider-btn slider-prev" id="slider-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" id="slider-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="slider-counter" id="slider-counter">
+                <span id="current-slide">1</span> / <span id="total-slides">0</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-image">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" id="lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" id="lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Впечатлены нашим домом?</h2>
+                <p class="cta-subtitle">
+                    Забронируйте проживание и насладитесь всеми удобствами нашего гостевого дома
+                </p>
+                <div class="cta-buttons">
+                    <a href="booking.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i>
+                        Забронировать
+                    </a>
+                    <a href="contacts.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        Связаться с нами
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-home"></i>
+                        <span>Гостевой дом</span>
+                    </div>
+                    <p class="footer-description">
+                        Уютный отдых на природе в окружении леса и реки. 
+                        Современный комфорт и полная приватность.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-vkontakte"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="about.html">О нас</a>
+                        <a href="gallery.html">Галерея</a>
+                        <a href="contacts.html">Контакты</a>
+                        <a href="booking.html">Бронирование</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (123) 456-78-90</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>booking@lavillapine.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Московская область</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Гостевой дом. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

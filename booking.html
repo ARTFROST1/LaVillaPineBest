@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование - Гостевой дом</title>
+    <meta name="description" content="Забронируйте наш гостевой дом онлайн. Современный дом на природе с полной приватностью и всеми удобствами.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-home"></i>
+                <span>Гостевой дом</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="gallery.html" class="nav-link">Галерея</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="booking.html" class="nav-link booking-btn active">Бронирование</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Hero Section -->
+    <section class="booking-hero">
+        <div class="booking-hero-background">
+            <img src="https://pixabay.com/get/gfa77d3708407071e51492bdf7f921d2b746731b38873f2679413a8bb8a5bf6c42522f6367954c825de0cd6a2958021c6d692a5274e8fbaf8de54fd670fec916c_1280.jpg" alt="Бронирование">
+            <div class="booking-hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="booking-hero-content">
+                <h1 class="booking-hero-title">Забронируйте незабываемый отдых</h1>
+                <p class="booking-hero-subtitle">
+                    Современный гостевой дом на природе с полной приватностью и всеми удобствами
+                </p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Большой бассейн с подогревом</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-tree"></i>
+                        <span>Лес с белками и птицами</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-water"></i>
+                        <span>Ручей рядом с домами</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-lock"></i>
+                        <span>Полная приватность</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-car"></i>
+                        <span>Парковка на территории</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Booking Module Section -->
+    <section class="main-booking-section">
+        <div class="container">
+            <div class="booking-layout">
+                <!-- Booking Widget -->
+                <div class="booking-widget-section">
+                    <div class="widget-card">
+                        <div class="widget-header">
+                            <h2 class="section-title">Модуль бронирования</h2>
+                            <p class="section-subtitle">
+                                Выберите даты и забронируйте дом онлайн
+                            </p>
+                        </div>
+                        
+                        <div class="booking-widget-container">
+                            <!-- Placeholder for third-party booking system -->
+                            <div class="booking-widget-placeholder">
+                                <div class="placeholder-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h3>Здесь будет размещен модуль бронирования от стороннего сервиса</h3>
+                                <p class="placeholder-description">
+                                    Замените этот блок на HTML-код вашей системы бронирования. 
+                                    Модуль должен включать:
+                                </p>
+                                
+                                <ul class="placeholder-features">
+                                    <li><i class="fas fa-check"></i> Календарь выбора дат</li>
+                                    <li><i class="fas fa-check"></i> Количество гостей</li>
+                                    <li><i class="fas fa-check"></i> Расчет стоимости</li>
+                                    <li><i class="fas fa-check"></i> Форма бронирования</li>
+                                    <li><i class="fas fa-check"></i> Онлайн оплата</li>
+                                </ul>
+                                
+                                <!-- Styling container for third-party widget -->
+                                <div class="third-party-widget" id="booking-widget">
+                                    <!-- 
+                                        Вставьте сюда код виджета бронирования:
+                                        
+                                        <script src="https://booking-service.com/widget.js"></script>
+                                        <div id="booking-widget-container"></div>
+                                        
+                                        или любой другой HTML/JavaScript код вашего провайдера бронирования
+                                    -->
+                                    <div class="widget-demo">
+                                        <p><strong>Пример интеграции:</strong></p>
+                                        <code>&lt;!-- Booking widget code goes here --&gt;</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alternative-booking">
+                            <div class="divider">
+                                <span>или</span>
+                            </div>
+                            
+                            <div class="contact-booking">
+                                <h3>Забронируйте по телефону</h3>
+                                <p>Наши менеджеры помогут подобрать идеальные даты</p>
+                                
+                                <div class="contact-methods">
+                                    <a href="tel:+71234567890" class="contact-method-btn">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                            <span class="method-title">Позвонить</span>
+                                            <span class="method-details">+7 (123) 456-78-90</span>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="https://wa.me/71234567890" class="contact-method-btn" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <div>
+                                            <span class="method-title">WhatsApp</span>
+                                            <span class="method-details">Быстрый ответ</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Booking Information -->
+                <div class="booking-info-section">
+                    <div class="info-card">
+                        <h3>Информация о бронировании</h3>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Время заезда/выезда</h4>
+                                    <p>Заезд: с 15:00<br>Выезд: до 12:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Количество гостей</h4>
+                                    <p>До 8 человек<br>Дополнительные места по запросу</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Минимальное бронирование</h4>
+                                    <p>От 2 ночей<br>В выходные - от 2 ночей</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Отмена бронирования</h4>
+                                    <p>Бесплатная отмена за 7 дней<br>до заезда</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Оплата</h4>
+                                    <p>Предоплата 50%<br>Остальное при заезде</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-paw"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Размещение с животными</h4>
+                                    <p>Домашние животные<br>приветствуются</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="included-card">
+                        <h3>Что включено</h3>
+                        
+                        <div class="included-list">
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Пользование всеми помещениями дома</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Бассейн с подогревом</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Финская сауна</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Зона барбекю и мангал</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Парковка на территории</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Постельное белье и полотенца</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Базовая посуда и кухонные принадлежности</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Wi-Fi интернет</span>
+                            </div>
+                            <div class="included-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Уборка перед заездом</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-services-card">
+                        <h3>Дополнительные услуги</h3>
+                        
+                        <div class="service-list">
+                            <div class="service-item">
+                                <div class="service-info">
+                                    <span class="service-name">Трансфер от/до станции</span>
+                                    <span class="service-price">2000 ₽</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-info">
+                                    <span class="service-name">Продукты к заезду</span>
+                                    <span class="service-price">По счету</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-info">
+                                    <span class="service-name">Дополнительная уборка</span>
+                                    <span class="service-price">3000 ₽</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-info">
+                                    <span class="service-name">Повар на дом</span>
+                                    <span class="service-price">От 5000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- House Features Section -->
+    <section class="house-features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают наш дом</h2>
+                <p class="section-subtitle">Преимущества, которые делают ваш отдых незабываемым</p>
+            </div>
+            
+            <div class="features-showcase">
+                <div class="feature-showcase-item">
+                    <div class="feature-image">
+                        <img src="https://pixabay.com/get/gdcb3f5dd5833128acc2f76f0b89a55186bdea16479d7819850636c0d121d5e4f934376da66012e29bd3fd3b23798eb81380af7fcbec3a467125f6bda6170e82b_1280.jpg" alt="Комфорт">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Современный комфорт</h3>
+                        <p>Стильные интерьеры, современная техника и продуманная планировка для максимального комфорта вашего отдыха.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-showcase-item reverse">
+                    <div class="feature-image">
+                        <img src="https://pixabay.com/get/gd896c056c709f18b5d0023e6a15a92a0883cd831cab32d9337b4e516f320a5f4491f64f6697c37ca144e87032b7dd3aed555a929db2a5e1d019d6d61c24382c5_1280.jpg" alt="Природа">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Единение с природой</h3>
+                        <p>Дом окружен вековым лесом и находится рядом с чистой рекой. Идеальное место для отдыха от городской суеты.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-showcase-item">
+                    <div class="feature-image">
+                        <img src="https://pixabay.com/get/g4c72d9616fadace9ed222c2cf19017bdc43aa30efc45372e8bc196c01fe8af30bc76049d87ed02dc19d06dd16c137f132f14192e81ae4cc974613e124a155681_1280.jpg" alt="Удобства">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Эксклюзивные удобства</h3>
+                        <p>Финская сауна, бассейн с подогревом, зона барбекю и многое другое для вашего идеального отдыха.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Preview -->
+    <section class="reviews-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Отзывы наших гостей</h2>
+                <p class="section-subtitle">Что говорят о нас те, кто уже отдыхал в нашем доме</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Потрясающее место для отдыха! Дом очень уютный и современный, а природа вокруг просто волшебная. 
+                        Особенно понравилась сауна и бассейн. Обязательно вернемся еще!"
+                    </p>
+                    <div class="review-author">
+                        <strong>Анна К.</strong>
+                        <span>Сентябрь 2024</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Отличное место для семейного отдыха. Дети были в восторге от белок в лесу, а взрослые наслаждались 
+                        тишиной и покоем. Все очень чисто и продумано до мелочей."
+                    </p>
+                    <div class="review-author">
+                        <strong>Михаил С.</strong>
+                        <span>Август 2024</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Провели здесь корпоратив - все были довольны! Достаточно места для всей команды, отличная зона 
+                        для барбекю и прекрасная атмосфера. Хозяева очень отзывчивые."
+                    </p>
+                    <div class="review-author">
+                        <strong>Елена В.</strong>
+                        <span>Июль 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Не упустите возможность незабываемого отдыха</h2>
+                <p class="cta-subtitle">
+                    Забронируйте наш гостевой дом сейчас и получите 
+                    особые условия для раннего бронирования
+                </p>
+                <div class="cta-buttons">
+                    <a href="#booking-widget" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i>
+                        Забронировать онлайн
+                    </a>
+                    <a href="tel:+71234567890" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        Позвонить сейчас
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-home"></i>
+                        <span>Гостевой дом</span>
+                    </div>
+                    <p class="footer-description">
+                        Уютный отдых на природе в окружении леса и реки. 
+                        Современный комфорт и полная приватность.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-vkontakte"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="about.html">О нас</a>
+                        <a href="gallery.html">Галерея</a>
+                        <a href="contacts.html">Контакты</a>
+                        <a href="booking.html">Бронирование</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (123) 456-78-90</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>booking@lavillapine.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Московская область</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Гостевой дом. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

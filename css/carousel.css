@@ -1,0 +1,226 @@
+/* Carousel Styles */
+.carousel-section {
+    padding: var(--space-4xl) 0;
+    background-color: var(--bg-white);
+}
+
+.carousel-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow-medium);
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--text-white);
+    padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--text-white);
+}
+
+.carousel-caption p {
+    font-size: var(--font-size-lg);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    color: var(--text-dark);
+    transition: var(--transition);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: var(--space-lg);
+}
+
+.carousel-next {
+    right: var(--space-lg);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-sm);
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.indicator.active,
+.indicator:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Carousel animations */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.carousel-slide.slide-in-right {
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+.carousel-slide.slide-in-left {
+    animation: slideInFromLeft 0.6s ease-out;
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+    .carousel-track {
+        height: 350px;
+    }
+    
+    .carousel-caption {
+        padding: var(--space-xl) var(--space-md) var(--space-md);
+    }
+    
+    .carousel-caption h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .carousel-caption p {
+        font-size: var(--font-size-base);
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-base);
+    }
+    
+    .carousel-prev {
+        left: var(--space-md);
+    }
+    
+    .carousel-next {
+        right: var(--space-md);
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track {
+        height: 250px;
+    }
+    
+    .carousel-caption {
+        padding: var(--space-lg) var(--space-sm) var(--space-sm);
+    }
+    
+    .carousel-caption h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .carousel-caption p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .carousel-indicators {
+        bottom: var(--space-sm);
+    }
+}
