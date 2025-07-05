@@ -102,11 +102,22 @@ This is a static website for a guest house rental business, built with HTML, CSS
 - Image URLs may need updating for production
 - Contact form requires backend integration for actual submission
 
+## Recent Changes
+
+- ✓ Updated all page titles and navigation to "La Villa Pine" branding
+- ✓ Incorporated specific property details: two loft-style houses, LED saunas, individual heated pools
+- ✓ Added detailed amenities: forest with squirrels, stream, mineral springs, spa complex
+- ✓ Created new services section highlighting nearby restaurant, coffee shop, reception desk
+- ✓ Updated hero section with accurate distance information (20 min to city, 30 min to mountains)
+- ✓ Enhanced footer descriptions across all pages
+- ✓ Added CSS styling for new services grid section
+
 ## Changelog
 
 ```
 Changelog:
 - July 05, 2025. Initial setup
+- July 05, 2025. Updated branding and content to match La Villa Pine property description
 ```
 
 ## User Preferences
