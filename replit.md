@@ -111,6 +111,8 @@ This is a static website for a guest house rental business, built with HTML, CSS
 - ✓ Updated hero section with accurate distance information (20 min to city, 30 min to mountains)
 - ✓ Enhanced footer descriptions across all pages
 - ✓ Added CSS styling for new services grid section
+- ✓ Improved text contrast and visibility over background images with enhanced shadows and overlays
+- ✓ Created comprehensive assets folder structure for real images with organized categories
 
 ## Changelog
 
